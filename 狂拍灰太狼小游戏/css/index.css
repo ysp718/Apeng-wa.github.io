@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#gameBox{
+	width: 320px;
+	height: 480px;
+	background: url(../img/game_bg.jpg) no-repeat 0 0;
+	margin:100px auto;
+	position: relative;
+}
+#scores{
+	color: white;
+	position: absolute;
+	top: 0px;
+	left: 65px;
+}
+#bar{
+	background: url(../img/progress.png) no-repeat 0 0;
+	width: 180px;
+	height: 16px;
+	position: absolute;
+	top: 66px;
+	left: 63px;
+}
+#start{
+	width: 150px;
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	border-radius: 20px;
+	top:320px;
+	background: linear-gradient(#E55C3D,#C50000);
+	border: none;
+	line-height: 30px;
+	outline: none;
+
+}
+#rules{
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	background-color: #ccc;
+}
+#rule{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	padding-top: 100px;
+	box-sizing: border-box;
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#rule>p{
+	color: white;
+	line-height: 50px;
+}
+#rule>a{
+	color: red;
+}
+#over{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	padding-top: 200px;
+	box-sizing: border-box;
+	text-align: center;
+	display: none;
+}
+#over>h1{
+	color: #ff4500;
+	text-shadow: 3px 3px 0px #fff;
+}
+#reStart{
+	width: 150px;
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	border-radius: 20px;
+	top:320px;
+	background: linear-gradient(#74ACCF,#007DDC);
+	border: none;
+	line-height: 30px;
+	outline: none;
+
+}

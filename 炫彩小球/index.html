@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>炫彩小球</title>
+    <style>
+        #canvas {
+            margin:100px auto;
+            display: block;
+            box-shadow: 0 0 10px #000;
+
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas">当前浏览器不支持</canvas>
+    <script src="underscore-min.js"></script>
+    <script>
+        const canvas=document.getElementById("canvas");
+        const ctr=canvas.getContext('2d');
+        canvas.width=1000;
+        canvas.height=600;
+        canvas.style.backgroundColor="#000";
+        //定义小球类
+        class Ball{
+            constructor(x,y,color){
+                this.x=x;
+                this.y=y;
+                this.color=color;
+                this.r=40;
+            };
+            //绘制小球
+            render(){
+                ctr.save();
+                ctr.beginPath();
+                ctr.arc(this.x,this.y,this.r,0,Math.PI*2);
+                ctr.fillStyle=this.color;
+                ctr.fill();
+                ctr.restore();
+            };
+        };
+        //定义移动的小球
+        class moveBall extends Ball{
+            constructor(x,y,color){
+                super(x,y,color);
+                //定义方向增量，大小增量
+                this.dX=_.random(-5,5);
+                this.dY=_.random(-5,5);
+                this.dR=_.random(1,3);
+            };
+            
+            //设置移动
+            Update(){
+                this.x+=this.dX;
+                this.y+=this.dY;
+                this.r-=this.dR;
+                if(this.r<0){
+                    this.r=0;
+                };
+            }
+
+
+        }
+        let ballarr=[];
+        let color=['red','green','yellow','blue','purple','pink','orange','white'];
+        //添加小球
+        canvas.onmousemove=function(e){
+            ballarr.push(new moveBall(e.offsetX,e.offsetY,color[_.random(0,color.length-1)]));
+            console.log(ballarr);
+        }
+        setInterval(function(){
+            //清屏
+            ctr.clearRect(0,0,canvas.width,canvas.height);
+            //绘制
+            for(var i=0;i<ballarr.length;i++){
+                ballarr[i].render();
+                ballarr[i].Update();
+            }
+        },50)
+
+
+    </script>
+</body>
+</html>

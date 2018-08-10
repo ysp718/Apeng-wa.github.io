@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QQ音乐</title>
+	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/jquery.nanoscroller.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/progress.js"></script>
+	<script type="text/javascript" src="js/lrc.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+</head>
+<body>
+	<div id="hearder">
+		<h1 class="logo"><a href="#"></a></h1>
+		<ul class="register">
+			<li><a href="#">登陆</a></li>
+			<li><a href="#">设置</a></li>
+		</ul>
+	</div>
+	<div id="comment">
+		<div id="comment_in">
+			<div id="comment_left">
+				<div id="comment_leftTop">
+					<span><i></i>收藏</span>
+					<span><i></i>添加到</span>
+					<span><i></i>下载</span>
+					<span><i></i>删除</span>
+					<span><i></i>清空列表</span>
+				</div>
+				<div class="nano">
+				<div id="comment_leftMain" class="nano-content">
+					<ul>
+						<li class="music-listTop">
+							<div class="music-checked"></div>
+							<div class="music-num" ></div>
+							<div class="music-name">歌曲</div>
+							<div class="music-singer">歌手</div>
+							<div class="music-time">时长</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+			<div id="comment_right">
+				<div id="music_info">
+					<a >
+						<img src="img/lnj.jpg" class="music-image">
+					</a>
+					<p class='music-right-name'>歌曲名称: <a href="javascript:;">哈哈的歌</a></p>
+					<p class='music-right-singer'>歌手名: <a href="javascript:;">哈哈</a></p>
+					<p class='music-right-album'>专辑名: <a href="javascript:;">哈哈的专辑</a></p>
+				</div>
+				<div class="music-lyric-box">
+				<div id="music_lyric">
+					<!-- <p class="cur">娃哈哈娃哈哈</p>
+					<p>娃哈哈娃哈哈</p> -->
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="footer_in">
+			<a href="javascript:;" class="music-pre"></a>
+			<a href="javascript:;" class="music-play"></a>
+			<a href="javascript:;" class="music-next"></a>
+			<div class="music-progress">
+				<div class="progress-info">
+					<span class="progress-song">哈哈</span>
+					<span class="progress-time">00:00/04:00</span>	
+				</div>
+				<div class="progress-bar">
+					<span class="progress-pass"></span>
+					<a class="progress-dot" href="javascript:;"></a>
+				</div>
+			</div>
+			<a href="javascript:;" class="music-mode music-mode4"></a>
+			<a href="javascript:;" class="music-fav music-faved"></a>
+			<a href="javascript:;" class="music-down"></a>
+			<a href="javascript:;" class="music-comment"></a>
+			<a href="javascript:;" class="music-only music-only-on"></a>
+			<div class="music-voice">
+				<a href="javascript:;" class="music-coin"></a>
+				<div class="voice-bar">
+					<span class="voice-pass"></span>
+					<a class="voice-dot" href="javascript:;"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mask_bg"></div>
+	<div id="mask_bg_pre"></div>
+	<audio id="audio"></audio>
+</body>
+</html>
