@@ -18,3 +18,5 @@ https://ysp718.github.io/Apeng-wa.github.io/花瓣网
 努比亚官网
 https://ysp718.github.io/Apeng-wa.github.io/努比亚官网
 
+炫彩小球
+https://ysp718.github.io/Apeng-wa.github.io/炫彩小球
